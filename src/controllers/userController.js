@@ -155,14 +155,20 @@ module.exports = {
                             'name',
                             'portions',
                             'preparationTime',
-                            'difficulty',
                             'image'
                         ],
-                        populate: {
+
+                        populate: [{
                             path: 'type',
+                            select: 'name',
+                        },
+                        {
+                            path: 'difficulty',
                             select: 'name'
-                        }
+                        }],
                     })
+
+
                     .then(response => {
                         /// success response
                         res.status(200).json({

@@ -12,8 +12,12 @@ module.exports = (app) => {
         app.get('/api/recipe/getAll', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getAll),
         app.delete('/api/recipe/delete', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false })/*, validateRole.validateAdmin*/], RecipeController.deleteRecipe),
         app.put('/api/recipe/updateRecipe', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false })/*, validateRole.validateAdmin]*/, upload.array('image')], RecipeController.updateRecipe),
+
         app.post('/api/recipe/create_recipe_type', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.createRecipeType),
         app.get('/api/recipe/getAllTypes', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getAllTypes),
+
+        app.post('/api/recipe/create_recipe_difficulty', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.createRecipeDifficulty),
+        app.get('/api/recipe/getAllDifficulty', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getAllDifficulties),
 
         app.post('/api/recipe/create_comment', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), /*validateRole.validateAdmin, */upload.array('image')], RecipeCommentController.createComment),
         app.get('/api/recipe/getAllCommentsById', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeCommentController.getRecipeCommentByID)

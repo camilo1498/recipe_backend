@@ -19,8 +19,9 @@ const recipeSchema = new Schema({
         default: ''
     },
     difficulty: {
-        type: Number,
-        default: 1
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'difficulty'
     },
     type: {
         type: Schema.Types.ObjectId,

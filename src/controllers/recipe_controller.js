@@ -1,7 +1,7 @@
 /// instances
 const RecipeModel = require('../models/recipe/recipe_model')
 const RecipeTypeModel = require('../models/recipe/recipe_type_model')
-const UserModel = require('../models/user_models/user_model')
+const RecipeDifficultyModel = require('../models/recipe/recipe_difficlty_model')
 const validations = require('../utils/validations')
 const cloudinary = require('../middleware/cloudinary')
 const jwt_helper = require('../helpers/jwt_helper')
@@ -45,7 +45,7 @@ module.exports = {
                 try {
                     fs.unlinkSync(path)
                 } catch (e) {
-                    
+
                 }
             }
 
@@ -100,6 +100,7 @@ module.exports = {
             /// DB query
             await RecipeModel.findById({ _id: id })
                 .populate('type', { name: 1 })
+                .populate('difficulty', { name: 1 })
                 .populate('created_by', { name: 1, lastname: 1 })
                 /// success, post found
                 .then(async (response) => {
@@ -142,6 +143,7 @@ module.exports = {
             /// DB query
             await RecipeModel.find(body)
                 .populate('type', { name: 1 })
+                .populate('difficulty', { name: 1 })
                 .populate('created_by', { name: 1, lastname: 1 })
                 .then(response => { /// success response
                     res.status(200).json({
@@ -216,7 +218,7 @@ module.exports = {
                     try {
                         fs.unlinkSync(path)
                     } catch (e) {
-                        
+
                     }
                 }
 
@@ -271,7 +273,7 @@ module.exports = {
     },
 
 
-    //** RECIPE TYPE METHODS **/
+    //** RECIPE CATEGORY METHODS **/
 
     /// create type
     async createRecipeType(req, res) {
@@ -318,4 +320,48 @@ module.exports = {
         }
     },
 
+    //** RECIPE CATEGORY METHODS **/
+    /// get all difficulty
+    async createRecipeDifficulty(req, res) {
+        try {
+            const { name } = req.body
+
+
+            const recipeType = new RecipeDifficultyModel({
+                name
+            })
+
+            await recipeType.save()
+                .then(response => {
+                    res.status(200).json({
+                        success: true,
+                        message: 'recipe difficulty created',
+                        data: response ?? []
+                    })
+                }).catch(err => {
+                    validations.validateResponse(res, err)
+                })
+
+        } catch (e) {
+            validations.validateResponse(res, e ?? 'Error while creating recipe difficulty')
+        }
+    },
+
+    /// get all recipe types
+    async getAllDifficulties(req, res) {
+        try {
+            /// DB query
+            await RecipeDifficultyModel.find({}).then(response => { /// success response
+                res.status(200).json({
+                    success: true,
+                    message: 'getting all difficulty',
+                    data: response ?? []
+                })
+            }).catch(err => { /// error response
+                validations.validateResponse(res, err)
+            })
+        } catch (e) { /// inernal error
+            validations.validateResponse(res, e ?? 'Error while getting ')
+        }
+    },
 }
