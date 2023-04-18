@@ -1,0 +1,1017 @@
+{
+	"info": {
+		"_postman_id": "3d5c417f-af97-4d8c-9c1a-708bb04d2f0e",
+		"name": "car selling request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7988656"
+	},
+	"item": [
+		{
+			"name": "post / vehicle",
+			"item": [
+				{
+					"name": "create post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjgxNjU4LCJleHAiOjE2NjM4NzM2NTh9.MQd-msvSuny-ph4HmIcBicPo_cT2LJ2kJpHlwCbuZtI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/deybivelandia/Downloads/pexels-photo-1525041.jpeg"
+								},
+								{
+									"key": "brand",
+									"value": "6303a37d4e7ab5d1d83a5681",
+									"type": "text"
+								},
+								{
+									"key": "mileage",
+									"value": "1500000",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "available_colours[0]",
+									"value": "red",
+									"type": "text"
+								},
+								{
+									"key": "available_colours[1]",
+									"value": "red, green, black",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "example",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "es una carro",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "250000000",
+									"type": "text"
+								},
+								{
+									"key": "available_vehicle",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "is_new",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "concessionarie_location",
+									"value": "Bogotá",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[brand]",
+									"value": "some",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[vehicle_type]",
+									"value": "6308d018882ee6b2586dce4d",
+									"type": "text"
+								},
+								{
+									"key": "data_shee[release_date]",
+									"value": "2020-02-19",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[color]",
+									"value": "black",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[fuel_type]",
+									"value": "gas",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[total_doors]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[transmition_type]",
+									"value": "manual",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[engine_type]",
+									"value": "1700",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[mileage]",
+									"value": "20000000",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[total_seats]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "data_sheet[release_date]",
+									"value": "2022-08-14",
+									"type": "text"
+								},
+								{
+									"key": "contact_info[agent_name]",
+									"value": "name",
+									"type": "text"
+								},
+								{
+									"key": "contact_info[phone_number]",
+									"value": "123123213",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3306/api/post/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjYzMzY3LCJleHAiOjE2NjM4NTUzNjd9.ZFxuNY4LoHvMQCtupTryPsccmIfVnMpRnd2-aDx7N4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/post/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"post",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjgxNjU4LCJleHAiOjE2NjM4NzM2NTh9.MQd-msvSuny-ph4HmIcBicPo_cT2LJ2kJpHlwCbuZtI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"6307a84fcf88dcf4362bfbea\",\n    \"price\": 350000000,\n    \"name\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/post/updatePost?id=6307a84fcf88dcf4362bfbea",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"post",
+								"updatePost"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6307a84fcf88dcf4362bfbea"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmVhMTJiZWQ3MTljODg3NWUzMTA5OSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjAxNDI0LCJleHAiOjE2NjM3OTM0MjR9.oz22Fet_rddNOri3a_FwwycwDnw55npXf5ohR_5TgT8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/post/delete?id=62fea12bed719c8875e31099",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"post",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62fea12bed719c8875e31099"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saved / unsaved post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjYzMzY3LCJleHAiOjE2NjM4NTUzNjd9.ZFxuNY4LoHvMQCtupTryPsccmIfVnMpRnd2-aDx7N4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/post/savePost?id=63061601b4e3920aee4307a0",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"post",
+								"savePost"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63061601b4e3920aee4307a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like / unlike post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjYzMzY3LCJleHAiOjE2NjM4NTUzNjd9.ZFxuNY4LoHvMQCtupTryPsccmIfVnMpRnd2-aDx7N4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/post/likePost?id=6307a84fcf88dcf4362bfbea",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"post",
+								"likePost"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6307a84fcf88dcf4362bfbea"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxNTE4NDkyLCJleHAiOjE2NjQxMTA0OTJ9.0GcVT1wJd0HqYmU65FvEb-8mFCN_24ypWv9gUGDU9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"images\": [\n        \"asdasdasdasd\",\n        \"asdasdasdasd\"\n    ],\n    \"brand\": \"6303a37d4e7ab5d1d83a5681\",\n    \"mileage\": 1000,\n    \"available_colours\": [\n        \"red\",\n        \"green\"\n    ],\n    \"name\": \"something\",\n    \"description\": \"sdasdasldkalskdlaskdlksadkskd\",\n    \"data_sheet\": {\n        \"brand\": \"some\",\n        \"model\": \"mm\",\n        \"release_date\": \"20-02-2022\",\n        \"color\": \"black\",\n        \"fuel_type\": \"gas\",\n        \"total_doors\": 5,\n        \"transmition_type\": \"auto\",\n        \"engine_type\": \"1600\",\n        \"mileage\": 30000,\n        \"total_seats\": 5\n    },\n    \"price\":250000,\n    \"contact_info\": {\n            \"agent_name\": \"name\",\n            \"phone_number\": \"32483298493\"\n        },\n        \"available_vehicle\": true,\n        \"is_new\": false,\n        \"concessionarie_location\": \"bogotá\"\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/post/getById?id=6308d814bf273fcc442be908",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"post",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6308d814bf273fcc442be908"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"admin\",\n    \"lastname\": \"my admin\",\n    \"email\": \"admin2@gmail.com\",\n    \"password\": \"123456\",\n    \"gender\": \"M\",\n    \"phoneNumber\": \"12345656\",\n    \"address\": \"kr sur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/user/login?email=admin@gmail.com&password=123456",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjYzMzY3LCJleHAiOjE2NjM4NTUzNjd9.ZFxuNY4LoHvMQCtupTryPsccmIfVnMpRnd2-aDx7N4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/user/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/user/refresh_token?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxODA0NjMzLCJleHAiOjE2OTMzNjIyMzN9.hUHgXRVcjYY3eV_qoV4quUlxwcNy_FNZhom9O1fu7vQ",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"user",
+								"refresh_token"
+							],
+							"query": [
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxODA0NjMzLCJleHAiOjE2OTMzNjIyMzN9.hUHgXRVcjYY3eV_qoV4quUlxwcNy_FNZhom9O1fu7vQ"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search",
+			"item": [
+				{
+					"name": "search by brand id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjYzMzY3LCJleHAiOjE2NjM4NTUzNjd9.ZFxuNY4LoHvMQCtupTryPsccmIfVnMpRnd2-aDx7N4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/search/findByBrand?brand_id=6303a37d4e7ab5d1d83a5681",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"search",
+								"findByBrand"
+							],
+							"query": [
+								{
+									"key": "brand_id",
+									"value": "6303a37d4e7ab5d1d83a5681"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxMjYzMzY3LCJleHAiOjE2NjM4NTUzNjd9.ZFxuNY4LoHvMQCtupTryPsccmIfVnMpRnd2-aDx7N4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/search/findByName?text=",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"search",
+								"findByName"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by vehicle_type id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxNTI4MzI2LCJleHAiOjE2NjQxMjAzMjZ9.i0sOmVZDxf7Kfrk4muZIYydsSS1rRCast6A0MAsLxOI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/search/findByVehivleType?type_id=6308d018882ee6b2586dce4d",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"search",
+								"findByVehivleType"
+							],
+							"query": [
+								{
+									"key": "type_id",
+									"value": "6308d018882ee6b2586dce4d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle model",
+			"item": [
+				{
+					"name": "get all models",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxNTE4NDkyLCJleHAiOjE2NjQxMTA0OTJ9.0GcVT1wJd0HqYmU65FvEb-8mFCN_24ypWv9gUGDU9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/vehicle_model/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"vehicle_model",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cerate model",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxNTE4NDkyLCJleHAiOjE2NjQxMTA0OTJ9.0GcVT1wJd0HqYmU65FvEb-8mFCN_24ypWv9gUGDU9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"sedan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/vehicle_model/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"vehicle_model",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get model by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxNTE4NDkyLCJleHAiOjE2NjQxMTA0OTJ9.0GcVT1wJd0HqYmU65FvEb-8mFCN_24ypWv9gUGDU9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/vehicle_model/getById?id=6308c347eeb0b68430826eb1",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"vehicle_model",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6308c347eeb0b68430826eb1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update model",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxNTE4NDkyLCJleHAiOjE2NjQxMTA0OTJ9.0GcVT1wJd0HqYmU65FvEb-8mFCN_24ypWv9gUGDU9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"6308c347eeb0b68430826eb1\",\n    \"name\": \"sedan 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/vehicle_model/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"vehicle_model",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete model",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6Im15IGFkbWluIiwicm9sZSI6WyI2MmZlNjlkODE2NDAyZDllMTc2NDlmNTYiXSwiaWF0IjoxNjYxNTE4NDkyLCJleHAiOjE2NjQxMTA0OTJ9.0GcVT1wJd0HqYmU65FvEb-8mFCN_24ypWv9gUGDU9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/vehicle_model/delete?id=6308c347eeb0b68430826eb1",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"vehicle_model",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6308c347eeb0b68430826eb1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tags",
+			"item": [
+				{
+					"name": "create tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOlsiNjJmZTY5ZDgxNjQwMmQ5ZTE3NjQ5ZjU2Il0sImlhdCI6MTY2MjY1NDI2NywiZXhwIjoxNjYyNjU3ODY3fQ.0plL8GkBvYlnry7fage7NCYtjemWLjiAcE-jOtR2dYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"just one more\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/tags/createTag",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"tags",
+								"createTag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOlsiNjJmZTY5ZDgxNjQwMmQ5ZTE3NjQ5ZjU2Il0sImlhdCI6MTY2MjY1NDI2NywiZXhwIjoxNjYyNjU3ODY3fQ.0plL8GkBvYlnry7fage7NCYtjemWLjiAcE-jOtR2dYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"just one more\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/tags/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"tags",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOlsiNjJmZTY5ZDgxNjQwMmQ5ZTE3NjQ5ZjU2Il0sImlhdCI6MTY2MjY1NDI2NywiZXhwIjoxNjYyNjU3ODY3fQ.0plL8GkBvYlnry7fage7NCYtjemWLjiAcE-jOtR2dYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/tags/getById?id=631a17a458ef56aec4918487",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"tags",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "631a17a458ef56aec4918487"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOlsiNjJmZTY5ZDgxNjQwMmQ5ZTE3NjQ5ZjU2Il0sImlhdCI6MTY2MjY1NDI2NywiZXhwIjoxNjYyNjU3ODY3fQ.0plL8GkBvYlnry7fage7NCYtjemWLjiAcE-jOtR2dYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"631a17a458ef56aec4918487\",\n    \"name\": \"updated!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3306/api/tags/updateTag",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"tags",
+								"updateTag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDRkZGU3N2JkZjk0YzQ1NzdkN2U5ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoibXkgYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOlsiNjJmZTY5ZDgxNjQwMmQ5ZTE3NjQ5ZjU2Il0sImlhdCI6MTY2MjY1NDI2NywiZXhwIjoxNjYyNjU3ODY3fQ.0plL8GkBvYlnry7fage7NCYtjemWLjiAcE-jOtR2dYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3306/api/tags/deleteTag?id=631a17a458ef56aec4918487",
+							"host": [
+								"localhost"
+							],
+							"port": "3306",
+							"path": [
+								"api",
+								"tags",
+								"deleteTag"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "631a17a458ef56aec4918487"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
