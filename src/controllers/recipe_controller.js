@@ -145,6 +145,7 @@ module.exports = {
                 .populate('type', { name: 1 })
                 .populate('difficulty', { name: 1 })
                 .populate('created_by', { name: 1, lastname: 1 })
+                .sort({ createdAt: 'descending' })
                 .then(response => { /// success response
                     res.status(200).json({
                         success: true,
