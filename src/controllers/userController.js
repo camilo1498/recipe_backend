@@ -2,7 +2,6 @@ const UserModel = require('../models/user_models/user_model')
 const UserRoleModel = require('../models/role_models/user_role_model')
 const validations = require('../utils/validations')
 const jwt_helper = require('../helpers/jwt_helper')
-const { populate } = require('../models/user_models/user_model')
 
 module.exports = {
     /// register user
@@ -17,15 +16,16 @@ module.exports = {
 
             /// validate paramaters
             if (name === undefined || name === null || name.length === 0) {
-                validations.validateResponse(res, "cannot get the parameter 'name'")
+                return 'name';
+                //validations.validateResponse(res, "cannot get the parameter 'name'")
             } else if (lastname === undefined || lastname === null || lastname.length === 0) {
-                validations.validateResponse(res, "cannot get the parameter 'lastname'")
+                //validations.validateResponse(res, "cannot get the parameter 'lastname'")
             } else if (email === undefined || email === null || email.length === 0) {
-                validations.validateResponse(res, "cannot get the parameter 'email'")
+                //validations.validateResponse(res, "cannot get the parameter 'email'")
             } else if (!validations.validateEmail(email)) {
-                validations.validateResponse(res, "invalid email")
+                //validations.validateResponse(res, "invalid email")
             } else if (password === undefined || password === null || password.length === 0) {
-                validations.validateResponse(res, "cannot get the parameter 'password'")
+                //validations.validateResponse(res, "cannot get the parameter 'password'")
             } else {
                 /// instance model object
                 const user = new UserModel({
