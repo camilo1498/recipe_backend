@@ -1,6 +1,7 @@
 /// instances
 const RecipeModel = require('../models/recipe/recipe_model')
 const RecipeTypeModel = require('../models/recipe/recipe_type_model')
+const RecipeTagModel = require('../models/recipe/recipe_tags')
 const RecipeDifficultyModel = require('../models/recipe/recipe_difficlty_model')
 const validations = require('../utils/validations')
 const cloudinary = require('../middleware/cloudinary')
@@ -26,6 +27,7 @@ module.exports = {
                 videoUri,
                 steps,
                 difficulty,
+                tags,
                 ingredients } = req.body
 
             /// instance of cloudinary and define image path and destination folder name
@@ -65,6 +67,7 @@ module.exports = {
                 ingredients,
                 comments: [],
                 favourite_count: [],
+                tags,
                 created_by: decodeToken.id
             })
 
@@ -128,15 +131,26 @@ module.exports = {
     /// get all recipes
     async getAll(req, res) {
         try {
-            const { type, name } = req.query
+            const { type, name, tags } = req.body
 
+            console.log(tags)
             var body = { name: { '$regex': name, '$options': 'i' } }
 
             if (type !== null && type !== undefined) {
-                console.log('here');
+
                 body = {
                     type: type,
                     name: { '$regex': name, '$options': 'i' }
+                }
+            }
+            if (tags !== null && tags !== undefined && tags.length !== 0) {
+                body = { name: { '$regex': name, '$options': 'i' }, tags: { $in: tags } }
+            }
+            if (tags !== null && tags !== undefined && type !== null && type !== undefined) {
+                body = {
+                    type: type,
+                    name: { '$regex': name, '$options': 'i' },
+                    tags: { $in: tags }
                 }
             }
 
@@ -144,6 +158,7 @@ module.exports = {
             await RecipeModel.find(body)
                 .populate('type', { name: 1 })
                 .populate('difficulty', { name: 1 })
+                .populate('tags', { name: 1 })
                 .populate('created_by', { name: 1, lastname: 1 })
                 .sort({ createdAt: 'descending' })
                 .then(response => { /// success response
@@ -365,4 +380,51 @@ module.exports = {
             validations.validateResponse(res, e ?? 'Error while getting ')
         }
     },
+
+    //** RECIPE TAG METHODS **/
+    /// create tag
+    async createRecipeTag(req, res) {
+        try {
+            /// get and save http param into a variable
+            const { name } = req.body
+            /// set param data to user role model
+            const role = new RecipeTagModel({
+                name
+            })
+
+            /// DB query
+            await role.save()
+                /// success response
+                .then(response => {
+
+
+                    res.status(201).json({
+                        success: true,
+                        message: 'RolTage was created successfuly',
+                        data: response ?? {}
+                    })
+                }) /// error response
+                .catch(err => {
+                    validations.validateResponse(res, err)
+                })
+        } catch (e) {
+            validations.validateResponse(res, e ?? 'Error while creating tag')
+        }
+    },
+
+    async getAllTags(req, res) {
+        try {
+            await RecipeTagModel.find({}).then(response => {
+                res.status(201).json({
+                    success: true,
+                    message: 'success',
+                    data: response ?? []
+                })
+            }).catch(err => {
+                validations.validateResponse(res, err)
+            })
+        } catch (e) {
+            validations.validateResponse(res, e ?? 'Error while getting tag')
+        }
+    }
 }

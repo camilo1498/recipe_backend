@@ -1,481 +1,72 @@
-[
-  {
-    "country_name_es": "Afganistán",
-    "country_name_en": "Afghanistan",
-    "country_num_code": "+93",
-    "country_code": "AF",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/af.svg"
-  },
-  {
-    "country_name_es": "Albania",
-    "country_name_en": "Albania",
-    "country_num_code": "+355",
-    "country_code": "AL",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/al.svg"
-  },
-  {
-    "country_name_es": "Alemania",
-    "country_name_en": "Germany",
-    "country_num_code": "+49",
-    "country_code": "DE",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/de.svg"
-  },
-  {
-    "country_name_es": "Andorra",
-    "country_name_en": "Andorra",
-    "country_num_code": "+376",
-    "country_code": "AD",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ad.svg"
-  },
-  {
-    "country_name_es": "Angola",
-    "country_name_en": "Angola",
-    "country_num_code": "+244",
-    "country_code": "AO",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ao.svg"
-  },
-  {
-    "country_name_es": "Anguila",
-    "country_name_en": "Anguilla",
-    "country_num_code": "+1-264",
-    "country_code": "AI",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ai.svg"
-  },
-  {
-    "country_name_es": "Antártida",
-    "country_name_en": "Antarctica",
-    "country_num_code": "",
-    "country_code": "AQ",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/aq.svg"
-  },
-  {
-    "country_name_es": "Antigua y Barbuda",
-    "country_name_en": "Antigua and Barbuda",
-    "country_num_code": "+1-268",
-    "country_code": "AG",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ag.svg"
-  },
-  {
-    "country_name_es": "Arabia Saudita",
-    "country_name_en": "Saudi Arabia",
-    "country_num_code": "+966",
-    "country_code": "SA",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/sa.svg"
-  },
-  {
-    "country_name_es": "Argelia",
-    "country_name_en": "Algeria",
-    "country_num_code": "+213",
-    "country_code": "DZ",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/dz.svg"
-  },
-  {
-    "country_name_es": "Argentina",
-    "country_name_en": "Argentina",
-    "country_num_code": "+54",
-    "country_code": "AR",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ar.svg"
-  },
-  {
-    "country_name_es": "Armenia",
-    "country_name_en": "Armenia",
-    "country_num_code": "+374",
-    "country_code": "AM",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/am.svg"
-  },
-  {
-    "country_name_es": "Aruba",
-    "country_name_en": "Aruba",
-    "country_num_code": "+297",
-    "country_code": "AW",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/aw.svg"
-  },
-  {
-    "country_name_es": "Australia",
-    "country_name_en": "Australia",
-    "country_num_code": "+61",
-    "country_code": "AU",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/au.svg"
-  },
-  {
-    "country_name_es": "Austria",
-    "country_name_en": "Austria",
-    "country_num_code": "+43",
-    "country_code": "AT",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/at.svg"
-  },
-  {
-    "country_name_es": "Azerbaiyán",
-    "country_name_en": "Azerbaijan",
-    "country_num_code": "+994",
-    "country_code": "AZ",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/az.svg"
-  },
-  {
-    "country_name_es": "Azerbaiyán",
-    "country_name_en": "Azerbaijan",
-    "country_num_code": "+994",
-    "country_code": "AZ",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/az.svg"
-  },
-  {
-    "country_name_es": "Bahamas",
-    "country_name_en": "Bahamas",
-    "country_num_code": "+1",
-    "country_code": "BS",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bs.svg"
-  },
-  {
-    "country_name_es": "Bahréin",
-    "country_name_en": "Bahrain",
-    "country_num_code": "+973",
-    "country_code": "BH",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bh.svg"
-  },
-  {
-    "country_name_es": "Bangladesh",
-    "country_name_en": "Bangladesh",
-    "country_num_code": "+880",
-    "country_code": "BD",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bd.svg"
-  },
-  {
-    "country_name_es": "Barbados",
-    "country_name_en": "Barbados",
-    "country_num_code": "+1",
-    "country_code": "BB",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bb.svg"
-  },
-  {
-    "country_name_es": "Belarús",
-    "country_name_en": "Belarus",
-    "country_num_code": "+375",
-    "country_code": "BY",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/by.svg"
-  },
-  {
-    "country_name_es": "Bélgica",
-    "country_name_en": "Belgium",
-    "country_num_code": "+32",
-    "country_code": "BE",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/be.svg"
-  },
-  {
-    "country_name_es": "Belice",
-    "country_name_en": "Belize",
-    "country_num_code": "+501",
-    "country_code": "BZ",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bz.svg"
-  },
-  {
-    "country_name_es": "Benín",
-    "country_name_en": "Benin",
-    "country_num_code": "+229",
-    "country_code": "BJ",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bj.svg"
-  },
-  {
-    "country_name_es": "Bermudas",
-    "country_name_en": "Bermuda",
-    "country_num_code": "+1",
-    "country_code": "BM",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bm.svg"
-  },
-  {
-    "country_name_es": "Bután",
-    "country_name_en": "Bhutan",
-    "country_num_code": "+975",
-    "country_code": "BT",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bt.svg"
-  },
-  {
-    "country_name_es": "Bolivia",
-    "country_name_en": "Bolivia, Plurinational State of",
-    "country_num_code": "+591",
-    "country_code": "BO",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bo.svg"
-  },
-  {
-    "country_name_es": "Brasil",
-    "country_name_en": "Brazil",
-    "country_num_code": "+55",
-    "country_code": "BR",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/br.svg"
-  },
-  {
-    "country_name_es": "Bahamas",
-    "country_name_en": "Bahamas",
-    "country_num_code": "+1-242",
-    "country_code": "BS",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bs.svg"
-  },
-  {
-    "country_name_es": "Bhután",
-    "country_name_en": "Bhutan",
-    "country_num_code": "+975",
-    "country_code": "BT",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bt.svg"
-  },
-  {
-    "country_name_es": "Botsuana",
-    "country_name_en": "Botswana",
-    "country_num_code": "+267",
-    "country_code": "BW",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bw.svg"
-  },
-  {
-    "country_name_es": "Bielorrusia",
-    "country_name_en": "Belarus",
-    "country_num_code": "+375",
-    "country_code": "BY",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/by.svg"
-  },
-  {
-    "country_name_es": "Belice",
-    "country_name_en": "Belize",
-    "country_num_code": "+501",
-    "country_code": "BZ",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/bz.svg"
-  },
-  {
-    "country_name_es": "Canadá",
-    "country_name_en": "Canada",
-    "country_num_code": "+1",
-    "country_code": "CA",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ca.svg"
-  },
-  {
-    "country_name_es": "República Democrática del Congo",
-    "country_name_en": "Congo, the Democratic Republic of the",
-    "country_num_code": "+243",
-    "country_code": "CD",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cd.svg"
-  },
-  {
-    "country_name_es": "República Centroafricana",
-    "country_name_en": "Central African Republic",
-    "country_num_code": "+236",
-    "country_code": "CF",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cf.svg"
-  },
-  {
-    "country_name_es": "Chad",
-    "country_name_en": "Chad",
-    "country_num_code": "+235",
-    "country_code": "TD",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/td.svg"
-  },
-  {
-    "country_name_es": "Chile",
-    "country_name_en": "Chile",
-    "country_num_code": "+56",
-    "country_code": "CL",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cl.svg"
-  },
-  {
-    "country_name_es": "China",
-    "country_name_en": "China",
-    "country_num_code": "+86",
-    "country_code": "CN",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cn.svg"
-  },
-  {
-    "country_name_es": "Chipre",
-    "country_name_en": "Cyprus",
-    "country_num_code": "+357",
-    "country_code": "CY",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cy.svg"
-  },
-  {
-    "country_name_es": "Ciudad del Vaticano",
-    "country_name_en": "Vatican City",
-    "country_num_code": "+379",
-    "country_code": "VA",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/va.svg"
-  },
-  {
-    "country_name_es": "Colombia",
-    "country_name_en": "Colombia",
-    "country_num_code": "+57",
-    "country_code": "CO",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/co.svg"
-  },
-  {
-    "country_name_es": "Comoras",
-    "country_name_en": "Comoros",
-    "country_num_code": "+269",
-    "country_code": "KM",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/km.svg"
-  },
-  {
-    "country_name_es": "Corea del Norte",
-    "country_name_en": "North Korea",
-    "country_num_code": "+850",
-    "country_code": "KP",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/kp.svg"
-  },
-  {
-    "country_name_es": "Corea del Sur",
-    "country_name_en": "South Korea",
-    "country_num_code": "+82",
-    "country_code": "KR",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/kr.svg"
-  },
-  {
-    "country_name_es": "Costa de Marfil",
-    "country_name_en": "Ivory Coast",
-    "country_num_code": "+225",
-    "country_code": "CI",
-    "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ci.svg"
-  },
-  [
-    {
-      "country_name_es": "Costa Rica",
-      "country_name_en": "Costa Rica",
-      "country_num_code": "+506",
-      "country_code": "CR",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cr.svg"
-    },
-    {
-      "country_name_es": "Côte d'Ivoire",
-      "country_name_en": "Côte d'Ivoire",
-      "country_num_code": "+225",
-      "country_code": "CI",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ci.svg"
-    },
-    {
-      "country_name_es": "Croatia",
-      "country_name_en": "Croatia",
-      "country_num_code": "+385",
-      "country_code": "HR",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/hr.svg"
-    },
-    {
-      "country_name_es": "Cuba",
-      "country_name_en": "Cuba",
-      "country_num_code": "+53",
-      "country_code": "CU",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cu.svg"
-    },
-    {
-      "country_name_es": "Curaçao",
-      "country_name_en": "Curaçao",
-      "country_num_code": "+599",
-      "country_code": "CW",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cw.svg"
-    },
-    {
-      "country_name_es": "Cyprus",
-      "country_name_en": "Cyprus",
-      "country_num_code": "+357",
-      "country_code": "CY",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cy.svg"
-    },
-    {
-      "country_name_es": "Czech Republic",
-      "country_name_en": "Czech Republic",
-      "country_num_code": "+420",
-      "country_code": "CZ",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cz.svg"
-    },
-    {
-      "country_name_es": "Democratic Republic of the Congo",
-      "country_name_en": "Democratic Republic of the Congo",
-      "country_num_code": "+243",
-      "country_code": "CD",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/cd.svg"
-    },
-    {
-      "country_name_es": "Denmark",
-      "country_name_en": "Denmark",
-      "country_num_code": "+45",
-      "country_code": "DK",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/dk.svg"
-    },
-    {
-      "country_name_es": "Djibouti",
-      "country_name_en": "Djibouti",
-      "country_num_code": "+253",
-      "country_code": "DJ",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/dj.svg"
-    },
-    {
-      "country_name_es": "Dominica",
-      "country_name_en": "Dominica",
-      "country_num_code": "+1-767",
-      "country_code": "DM",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/dm.svg"
-  },
-  {
-      "country_name_es": "Ecuador",
-      "country_name_en": "Ecuador",
-      "country_num_code": "+593",
-      "country_code": "EC",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ec.svg"
-  },
-  {
-      "country_name_es": "Egipto",
-      "country_name_en": "Egypt",
-      "country_num_code": "+20",
-      "country_code": "EG",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/eg.svg"
-  },
-  {
-      "country_name_es": "El Salvador",
-      "country_name_en": "El Salvador",
-      "country_num_code": "+503",
-      "country_code": "SV",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/sv.svg"
-  },
-  {
-      "country_name_es": "Emiratos Árabes Unidos",
-      "country_name_en": "United Arab Emirates",
-      "country_num_code": "+971",
-      "country_code": "AE",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ae.svg"
-  },
-  {
-      "country_name_es": "Eritrea",
-      "country_name_en": "Eritrea",
-      "country_num_code": "+291",
-      "country_code": "ER",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/er.svg"
-  },
-  {
-      "country_name_es": "Eslovaquia",
-      "country_name_en": "Slovakia",
-      "country_num_code": "+421",
-      "country_code": "SK",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/sk.svg"
-  },
-  {
-      "country_name_es": "Eslovenia",
-      "country_name_en": "Slovenia",
-      "country_num_code": "+386",
-      "country_code": "SI",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/si.svg"
-  },
-  {
-      "country_name_es": "España",
-      "country_name_en": "Spain",
-      "country_num_code": "+34",
-      "country_code": "ES",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/es.svg"
-  },
-  {
-      "country_name_es": "Estados Unidos de América",
-      "country_name_en": "United States of America",
-      "country_num_code": "+1",
-      "country_code": "US",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/us.svg"
-  },
-  {
-      "country_name_es": "Estonia",
-      "country_name_en": "Estonia",
-      "country_num_code": "+372",
-      "country_code": "EE",
-      "country_icon_url": "https://flagicons.lipis.dev/flags/4x3/ee.svg"
-  },
 
-  
-]
+
+{
+  "_id": {
+    "$oid": "6445d572ed5ea317c76e1319"
+  },
+  "name": "Limonada de yerbabuena cremosa",
+  "portions": {
+    "$numberInt": "4"
+  },
+  "preparationTime": {
+    "$numberInt": "6"
+  },
+  "videoUri": "https://www.youtube.com/watch?v=9qvc3hCeVsg&t=1s&ab_channel=Saboralacarta",
+  "difficulty": {
+    "$oid": "6445c7d0ed5ea317c76e1269"
+  },
+  "type": {
+    "$oid": "643f2bcd1332237830b1b3b4"
+  },
+  "image": {
+    "path_folder": "recipe Images/Limonada de yerbabuena cremosa_2023-04-24T01:03:46.334Z",
+    "images": [
+      "http://res.cloudinary.com/da7fetv9i/image/upload/v1682298224/recipe%20Images/Limonada%20de%20yerbabuena%20cremosa_2023-04-24T01:03:44.348Z0/f6trqbfq4ue7yb4bkijx.jpg",
+      "http://res.cloudinary.com/da7fetv9i/image/upload/v1682298225/recipe%20Images/Limonada%20de%20yerbabuena%20cremosa_2023-04-24T01:03:45.209Z0/clrbqf7919jzfiux6smy.jpg",
+      "http://res.cloudinary.com/da7fetv9i/image/upload/v1682298226/recipe%20Images/Limonada%20de%20yerbabuena%20cremosa_2023-04-24T01:03:45.781Z0/t5ji3sdhsywiq7stxq22.jpg"
+    ]
+  },
+  "steps": [
+    {
+      "title": "Prepara la limonada",
+      "description": "Añade al vaso de la licuadora la LECHE CONDENSADA LA LECHERA® ligth, el zumo de limón, el agua, el hielo, las hojas de hierbabuena y licua a velocidad alta hasta que la hierbabuena quede totalmente triturada.",
+      "_id": {
+        "$oid": "6445d572ed5ea317c76e131a"
+      }
+    },
+    {
+      "title": "Sirve",
+      "description": "Sirve la limonada en vasos individuales y decora con una hojita de hierbabuena.",
+      "_id": {
+        "$oid": "6445d572ed5ea317c76e131b"
+      }
+    }
+  ],
+  "comments": [],
+  "ingredients": [
+    "8 cucharadas de LECHE CONDENSADA LA LECHERA Light (120 g)",
+    "Zumo de 3 limones (144 ml)",
+    "2 tazas de agua (500 ml)",
+    "2 tazas de hielo",
+    "1 taza de hojas de hierbabuena (50 g)"
+  ],
+  "favourite_count": [],
+  "created_by": {
+    "$oid": "643a9a6d38e13403ea31f8e9"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1682298226402"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1682298226402"
+    }
+  },
+  "tags": [
+    {"$oid": "64467716519fa372afe4e225"}
+      ]
+}
+
+

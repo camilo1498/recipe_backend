@@ -28,6 +28,11 @@ const recipeSchema = new Schema({
         required: true,
         ref: 'recipe_type'
     },
+    tags: [{
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'recipe_tags'
+    }],
     image: {
         path_folder: {
             type: String,

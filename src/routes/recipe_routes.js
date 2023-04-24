@@ -9,7 +9,7 @@ const { upload } = require('../middleware/uploadFile')
 module.exports = (app) => {
     app.post('/api/recipe/create', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), /*validateRole.validateAdmin, */upload.array('image')], RecipeController.createRecipe),
         app.get('/api/recipe/getById', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getRecipeByID),
-        app.get('/api/recipe/getAll', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getAll),
+        app.post('/api/recipe/getAll', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getAll),
         app.delete('/api/recipe/delete', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false })/*, validateRole.validateAdmin*/], RecipeController.deleteRecipe),
         app.put('/api/recipe/updateRecipe', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false })/*, validateRole.validateAdmin]*/, upload.array('image')], RecipeController.updateRecipe),
 
@@ -20,5 +20,9 @@ module.exports = (app) => {
         app.get('/api/recipe/getAllDifficulty', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getAllDifficulties),
 
         app.post('/api/recipe/create_comment', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), /*validateRole.validateAdmin, */upload.array('image')], RecipeCommentController.createComment),
-        app.get('/api/recipe/getAllCommentsById', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeCommentController.getRecipeCommentByID)
+        app.get('/api/recipe/getAllCommentsById', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeCommentController.getRecipeCommentByID),
+
+
+        app.post('/api/recipe/create_tag', [jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), /*validateRole.validateAdmin, */upload.array('image')], RecipeController.createRecipeTag),
+        app.get('/api/recipe/getAllTag', jwt_helper.verifyAccessToken, passport.authenticate('jwt', { session: false }), RecipeController.getAllTags)
 }

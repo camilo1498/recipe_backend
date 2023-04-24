@@ -70,10 +70,7 @@ module.exports = {
                     date,
                 }
             }
-
-            console.log('===========')
-            console.log(date)
-            console.log('===========')
+            
             const comment = new recipeCommentModel(updateMap)
 
             await comment.save().then(response => {
