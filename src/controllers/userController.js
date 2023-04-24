@@ -3,6 +3,9 @@ const UserRoleModel = require('../models/role_models/user_role_model')
 const validations = require('../utils/validations')
 const jwt_helper = require('../helpers/jwt_helper')
 const { populate } = require('../models/user_models/user_model')
+const bcrypt = require('bcrypt')
+const nodeMailer = require('nodemailer')
+const hbs = require('nodemailer-express-handlebars')
 
 module.exports = {
     /// register user
@@ -358,5 +361,143 @@ module.exports = {
         } catch (e) {
             validations.validateResponse(res, e, { data: { favourite: false } })
         }
-    }
+    },
+
+    async changePassword(req, res) {
+        try {
+
+            const { password } = req.body;
+
+            /// local variables
+            let decodeToken = null
+            let userId
+
+            const genSalt = await bcrypt.genSalt(10)
+            const newPsw = await bcrypt.hash(password, genSalt)
+
+            /// decode token
+            decodeToken = jwt_helper.decodeAccessToken(req)
+            /// getting user id
+            userId = decodeToken.id
+
+            /// if token or decode token are invalid
+            if (!decodeToken.id) {
+                /// error response
+                validations.validateResponse(res, "invalid token")
+            } else {
+                const user = await UserModel.findOneAndUpdate({ _id: userId }, {
+                    $set: {
+                        password: newPsw
+                    }
+                }, { new: true }).then(response => {
+                    return {
+                        success: true,
+                        message: 'password changed',
+                        data: {}
+                    };
+                    //res.status(200).json();
+                }).catch(e => {
+                    return {
+                        success: false,
+                        message: e,
+                        data: {}
+                    }
+                });
+                if (user.success === true) {
+                    /// get user info
+                    const userProfile = await UserModel.findOne({ _id: user.data.id }).populate('role', {
+                        roleName: 1
+                    });
+
+                    /// success response
+                    res.status(201).json({
+                        'success': true,
+                        message: user.message,
+                        data: userProfile ?? {}
+                    })
+                } else { /// error response
+                    res.status(401).json(user)
+                }
+
+            }
+        } catch (err) {
+            validations.validateResponse(res, err ?? 'Error while changing psw')
+        }
+    },
+
+    async changeByEmail(req, res) {
+        try {
+
+            const { email } = req.body;
+
+            const password = Math.random().toString(36).slice(2)
+            const genSalt = await bcrypt.genSalt(10)
+            const newPsw = await bcrypt.hash(password, genSalt)
+
+
+            /// if token or decode token are invalid
+            if (email !== null && email !== undefined) {
+                const user = await UserModel.findOneAndUpdate({ email: email }, {
+                    $set: {
+                        password: newPsw
+                    }
+                }, { new: true }).then(response => {
+                    return {
+                        success: true,
+                        message: 'password changed',
+                        data: {}
+                    };
+                    //res.status(200).json();
+                }).catch(e => {
+                    return {
+                        success: true,
+                        message: e,
+                        data: {}
+                    }
+                });
+                if (user.success === true) {
+                    /// get user info
+                    await UserModel.findOne({ _id: user.data.id }).populate('role', {
+                        roleName: 1
+                    });
+
+                    //let account = await nodeMailer.createTestAccount()
+                    let transposer = nodeMailer.createTransport({
+                        service: 'gmail',
+                        host: process.env.MAILER_EMAIL,
+                        port: 587,
+                        secure: false,
+                        auth: {
+                            user: process.env.MAILER_EMAIL,
+                            pass: process.env.MAILER_PWD
+                        }
+                    })
+
+                    let info = await transposer.sendMail({
+                        from: 'PanComido App',
+                        to: email,
+                        subject: 'Recuperar contraseña',
+                        text: 'nueva contraseña: ' + password
+                    })
+
+
+                    /// success response
+                    res.status(201).json({
+                        'success': true,
+                        message: 'Contraseña enviada, revisa en "correos no deseados"',
+                        data: {}
+                    })
+                } else { /// error response
+                    res.status(401).json(user)
+                }
+
+            } else {
+                /// error response
+                validations.validateResponse(res, "invalid token")
+            }
+        } catch (err) {
+            validations.validateResponse(res, err ?? 'Error while changing psw')
+        }
+    },
+
 }
