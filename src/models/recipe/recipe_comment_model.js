@@ -20,8 +20,12 @@ const recipeCommentSchema = new Schema({
             type: Array
         }
     },
+    date: {
+        type: String,
+        required: true
+    }
 }, {
-    timestamps: true,
+    timestamps: false,
     versionKey: false
 })
 

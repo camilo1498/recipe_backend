@@ -19,7 +19,8 @@ module.exports = {
             /// get and save http param into a variable
             const {
                 recipe,
-                message
+                message,
+                date
             } = req.body
 
             if (req.files === undefined && req.files.length === 0 && message === undefined && message === null && message.length === 0) {
@@ -58,16 +59,21 @@ module.exports = {
                     image: {
                         path_folder: imageUrl.length === 0 ? null : 'recipe comment Images/' + new Date().toISOString(),
                         images: imageUrl.length === 0 ? null : imageUrl
-                    }
+                    },
+                    date,
                 }
             } else {
                 updateMap = {
                     user: decodeToken.id,
                     recipe,
-                    message
+                    message,
+                    date,
                 }
             }
 
+            console.log('===========')
+            console.log(date)
+            console.log('===========')
             const comment = new recipeCommentModel(updateMap)
 
             await comment.save().then(response => {
@@ -119,7 +125,8 @@ module.exports = {
                         total_items: response.totalDocs,
                         hasPrevPage: response.hasPrevPage,
                         hasNextPage: response.hasNextPage,
-                        data: response.docs ?? []
+                        data: response.docs ?? [],
+                        //createdAt: new Date(response.date.getTime() - (response.offset * 60000))
                     })
                 }) /// error response
                 .catch(err => {
